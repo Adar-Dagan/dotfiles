@@ -38,6 +38,12 @@ require("lazy").setup({
         branch = "harpoon2",
         dependencies = { "nvim-lua/plenary.nvim" }
     },
+    {
+        'stevearc/oil.nvim',
+        opts = {},
+        -- Optional dependencies
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+    },
 
     -- Setup LSP manager
     { 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
