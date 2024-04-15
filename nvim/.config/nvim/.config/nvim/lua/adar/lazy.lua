@@ -1,0 +1,91 @@
+-- Install lazy package manager
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
+end
+vim.opt.rtp:prepend(lazypath)
+
+vim.g.jukit_mappings = 0
+
+require("lazy").setup({
+    -- Color theme
+    { "EdenEast/nightfox.nvim" },
+    { 'sainnhe/gruvbox-material' },
+    { 'luisiacc/gruvbox-baby' },
+    { "ellisonleao/gruvbox.nvim" },
+
+    -- Editor plugins
+    { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+    { 'nvim-telescope/telescope.nvim',   tag = '0.1.3',      dependencies = { 'nvim-lua/plenary.nvim' } },
+    { 'nvim-treesitter/playground' },
+    { 'mbbill/undotree' },
+    { 'tpope/vim-fugitive' },
+    { 'github/copilot.vim' },
+    { 'tpope/vim-commentary' },
+    { 'mfussenegger/nvim-dap' },
+    { 'mfussenegger/nvim-dap-python' },
+    { 'ThePrimeagen/vim-be-good' },
+    {
+        "j-hui/fidget.nvim",
+        opts = {
+            -- options
+        },
+    },
+    {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        dependencies = { "nvim-lua/plenary.nvim" }
+    },
+    {
+        'stevearc/oil.nvim',
+        opts = {},
+        -- Optional dependencies
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+    },
+    {
+        'luk400/vim-jukit',
+    },
+    { "lewis6991/gitsigns.nvim" },
+    { "stevearc/conform.nvim" },
+    {
+        "luukvbaal/statuscol.nvim",
+        config = function()
+            require("statuscol").setup({})
+        end,
+    },
+
+
+    -- Setup LSP manager
+    { 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
+
+    --- Uncomment these if you want to manage LSP servers from neovim
+    { 'williamboman/mason.nvim' },
+    { 'williamboman/mason-lspconfig.nvim' },
+
+    -- LSP Support
+    {
+        'neovim/nvim-lspconfig',
+        dependencies = {
+            { 'hrsh7th/cmp-nvim-lsp' },
+        },
+    },
+
+    -- Autocompletion
+    {
+        'hrsh7th/nvim-cmp',
+        dependencies = {
+            { 'L3MON4D3/LuaSnip' },
+        }
+    }
+}, {
+    git = {
+        timeout = 300,
+    }
+})
