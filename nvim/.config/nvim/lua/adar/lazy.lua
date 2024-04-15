@@ -17,9 +17,6 @@ vim.g.jukit_mappings = 0
 require("lazy").setup({
     -- Color theme
     { "EdenEast/nightfox.nvim" },
-    { 'sainnhe/gruvbox-material' },
-    { 'luisiacc/gruvbox-baby' },
-    { "ellisonleao/gruvbox.nvim" },
 
     -- Editor plugins
     { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
