@@ -4,4 +4,4 @@ require("oil").setup({
     },
 })
 
-vim.keymap.set("n", "<leader>pv", "<cmd>Oil<cr>")
+vim.keymap.set("n", "<leader>pv", "<cmd>Oil<cr>", { desc = "Open [P]roject [V]iew" })

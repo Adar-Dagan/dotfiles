@@ -15,12 +15,13 @@ conform.setup({
 })
 
 vim.keymap.set('n', '<leader>f', function()
-    conform.format({ lsp_fallback = true }, function(err, did_edit)
-        if err then
-            print('Error: ' .. err)
-            return
-        end
+        conform.format({ lsp_fallback = true }, function(err, did_edit)
+            if err then
+                print('Error: ' .. err)
+                return
+            end
 
-        print('Formatted: ' .. (did_edit and 'yes' or 'no'))
-    end)
-end)
+            print('Formatted: ' .. (did_edit and 'yes' or 'no'))
+        end)
+    end,
+    { desc = "[F]ormat" })

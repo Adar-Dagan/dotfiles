@@ -3,18 +3,23 @@ local lsp = require('lsp-zero')
 lsp.on_attach(function(client, bufnr)
     -- see :help lsp-zero-keybindings
     -- to learn the available actions
-    local opts = lsp.default_keymaps({ buffer = bufnr })
-
-    vim.keymap.set('n', 'gd', function() vim.lsp.buf.definition() end, opts)
-    vim.keymap.set('n', 'K', function() vim.lsp.buf.hover() end, opts)
-    vim.keymap.set('n', '<leader>rn', function() vim.lsp.buf.rename() end, opts)
-    vim.keymap.set('n', '<leader>gr', function() vim.lsp.buf.references() end, opts)
-    vim.keymap.set({ 'n', 'v' }, '<leader>ca', function() vim.lsp.buf.code_action() end, opts)
+    vim.keymap.set('n', 'gd', function() vim.lsp.buf.definition() end,
+        { desc = '[G]o to [D]efinition', buffer = bufnr })
+    vim.keymap.set('n', 'K', function() vim.lsp.buf.hover() end,
+        { desc = '[H]over', buffer = bufnr })
+    vim.keymap.set('n', '<leader>rn', function() vim.lsp.buf.rename() end,
+        { desc = '[R]ename', buffer = bufnr })
+    vim.keymap.set('n', '<leader>gr', function() vim.lsp.buf.references() end,
+        { desc = '[G]o to [R]eferences', buffer = bufnr })
+    vim.keymap.set({ 'n', 'v' }, '<leader>ca', function() vim.lsp.buf.code_action() end,
+        { desc = '[C]ode [A]ction', buffer = bufnr })
+    vim.keymap.set('n', '<leader>ld', function() vim.diagnostic.open_float() end,
+        { desc = '[L]ine [D]iagnostics', buffer = bufnr })
 end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-    ensure_installed = { 'rust_analyzer', 'tsserver', 'eslint', 'clangd', 'lua_ls' },
+    ensure_installed = { 'rust_analyzer', 'tsserver', 'eslint', 'lua_ls' },
     handlers = {
         lsp.default_setup,
         lua_ls = function()

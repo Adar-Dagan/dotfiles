@@ -8,3 +8,4 @@ vim.keymap.set("n", "N", "Nzz")
 vim.keymap.set("n", "n", "nzz")
 
 vim.keymap.set("v", "<leader>p", '"_dP')
+vim.keymap.set("v", "<leader>y", '"+y')
