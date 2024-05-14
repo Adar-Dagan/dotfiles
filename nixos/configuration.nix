@@ -69,6 +69,7 @@
     stow
     zig
     ripgrep
+    wl-clipboard
     git-credential-manager
   ];
 
