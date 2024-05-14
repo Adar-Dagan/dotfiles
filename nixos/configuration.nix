@@ -65,6 +65,8 @@
   environment.systemPackages = with pkgs; [
     alejandra
     mako
+    libnotify
+    stow
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -96,13 +98,18 @@
 
   programs = {
     firefox.enable = true;
-    sway.enable = true;
+    sway = {
+      enable = true;
+      wrapperFeatures.gtk = true;
+    };
     git.enable = true;
     neovim = {
       enable = true;
       defaultEditor = true;
     };
   };
+
+  services.gnome.gnome-keyring.enable = true;
 
   hardware.bluetooth = {
     enable = true;
