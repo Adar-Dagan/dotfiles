@@ -22,9 +22,6 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
 ### Output configuration
 #
-# Default wallpaper (more resolutions are available in /run/current-system/sw/share/backgrounds/sway/)
-output * bg /run/current-system/sw/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-#
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
