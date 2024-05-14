@@ -67,6 +67,7 @@
     mako
     libnotify
     stow
+    zig
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

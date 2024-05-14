@@ -1,1 +1,1 @@
-export PATH=$PATH:~/nixos
+export PATH=$PATH:~/dotfiles/nixos
