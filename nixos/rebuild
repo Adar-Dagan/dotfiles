@@ -36,4 +36,4 @@ git commit -am "$current"
 popd
 
 # Notify all OK!
-notify-send "NixOS Rebuilt OK!" --icon=software-update-available
+notify-send -e -t 5000 "NixOS Rebuilt OK!" --icon=software-update-available
