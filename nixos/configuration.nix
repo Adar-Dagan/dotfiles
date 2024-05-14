@@ -45,7 +45,7 @@
 
   # Configure keymap in X11
   services.xserver = {
-    xkb.layout = "us, il";
+    xkb.layout = "us,he";
     xkb.variant = "";
     xkb.options = "grp:win_space_toggle";
   };
