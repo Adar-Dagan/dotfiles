@@ -15,8 +15,12 @@ if git diff --quiet '*.nix'; then
 fi
 
 # Autoformat your nix files
+if command -v alejandra >/dev/null 2>&1; then
 alejandra . &>/dev/null \
   || ( alejandra . ; echo "formatting failed!" && exit 1)
+else 
+    echo "alejandra not found"
+fi
 
 # Shows your changes
 git diff -U0 '*.nix'

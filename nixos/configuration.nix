@@ -66,6 +66,7 @@
     wl-clipboard
     git-credential-manager
     bottom
+    zoxide
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
