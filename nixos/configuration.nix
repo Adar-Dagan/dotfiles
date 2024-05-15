@@ -65,6 +65,7 @@
     ripgrep
     wl-clipboard
     git-credential-manager
+    bottom
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
