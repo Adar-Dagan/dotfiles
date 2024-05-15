@@ -110,6 +110,7 @@
       enable = true;
       defaultEditor = true;
     };
+    steam.enable = true;
   };
 
   services.gnome.gnome-keyring.enable = true;
