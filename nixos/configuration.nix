@@ -69,6 +69,7 @@
     zoxide
     fzf
     kanshi
+    wdisplays
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
