@@ -73,6 +73,7 @@
     rofi-wayland
     glib
     nwg-look
+    gedit
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

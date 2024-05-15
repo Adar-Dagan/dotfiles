@@ -207,10 +207,7 @@ bar {
 
 exec mako
 
-exec_always {
-  pkill kanshi
-  kanshi &
-}
+exec_always kanshi 
 
 workspace 1 output HDMI-A-1 
 workspace 2 output HDMI-A-1 
