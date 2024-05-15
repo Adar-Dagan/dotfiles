@@ -72,6 +72,7 @@
     wdisplays
     rofi-wayland
     glib
+    nwg-look
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
