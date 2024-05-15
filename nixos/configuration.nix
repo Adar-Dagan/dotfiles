@@ -70,7 +70,7 @@
     fzf
     kanshi
     wdisplays
-    nwg-look
+    rofi-wayland
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
