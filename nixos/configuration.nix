@@ -68,6 +68,7 @@
     bottom
     zoxide
     fzf
+    kanshi
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
