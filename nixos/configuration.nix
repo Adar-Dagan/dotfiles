@@ -71,6 +71,7 @@
     kanshi
     wdisplays
     rofi-wayland
+    glib
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
