@@ -44,7 +44,7 @@
   users.users.adar = {
     isNormalUser = true;
     description = "Adar";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "video"];
     packages = with pkgs; [];
   };
 
@@ -105,6 +105,7 @@
     };
     steam.enable = true;
     xwayland.enable = true;
+    light.enable = true;
   };
 
   services.gnome.gnome-keyring.enable = true;
