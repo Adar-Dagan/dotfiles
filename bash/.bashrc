@@ -1,6 +1,6 @@
-# Add rebuild script to the path
+# Add rebuild script to path
 export PATH=$PATH:~/dotfiles/nixos
-
-export XCURSOR_SIZE=64
+# Add restow script to path
+export PATH=$PATH:~/dotfiles/stow
 
 eval "$(zoxide init bash)"
