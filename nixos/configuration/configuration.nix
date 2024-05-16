@@ -71,6 +71,7 @@
     alsa-utils
     bc
     acpi
+    pamixer
   ];
 
   # List services that you want to enable:
