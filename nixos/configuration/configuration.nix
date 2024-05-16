@@ -68,8 +68,8 @@
     wdisplays
     rofi-wayland
     wirelesstools
-    alsa-utils
     bc
+    acpi
     pamixer
   ];
 
