@@ -72,8 +72,6 @@
     wdisplays
     rofi-wayland
     glib
-    nwg-look
-    gedit
     brave
   ];
 
@@ -116,6 +114,7 @@
       defaultEditor = true;
     };
     steam.enable = true;
+    xwayland.enable = true;
   };
 
   services.gnome.gnome-keyring.enable = true;
