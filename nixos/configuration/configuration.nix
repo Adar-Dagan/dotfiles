@@ -61,7 +61,6 @@
     zig
     ripgrep
     wl-clipboard
-    git-credential-manager
     bottom
     zoxide
     fzf
@@ -69,7 +68,6 @@
     wdisplays
     rofi-wayland
     brave
-    pass-wayland
   ];
 
   # List services that you want to enable:
@@ -104,9 +102,6 @@
     };
     steam.enable = true;
     xwayland.enable = true;
-    gnupg.agent = {
-      enable = true;
-    };
   };
 
   services.gnome.gnome-keyring.enable = true;
