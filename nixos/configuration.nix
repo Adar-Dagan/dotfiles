@@ -75,6 +75,7 @@
     nwg-look
     gedit
     brave
+    librewolf
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
