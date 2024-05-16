@@ -70,6 +70,7 @@
     rofi-wayland
     brave
     pass-wayland
+    gnupg
   ];
 
   # List services that you want to enable:
