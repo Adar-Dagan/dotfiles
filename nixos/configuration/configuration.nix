@@ -69,6 +69,7 @@
     rofi-wayland
     wirelesstools
     alsa-utils
+    bc
   ];
 
   # List services that you want to enable:
