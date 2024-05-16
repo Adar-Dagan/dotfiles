@@ -11,14 +11,13 @@ do
         wifi="Wifi: $wifi"
     fi
 
-    out=$(amixer get Master | grep 'Front Left:')
-    volume=$(echo $out | awk '{print $5}' | tr -d '[]')
-    mute_status=$(echo $out | awk '{print $6}')
+    volume=$(pamixer --get-volume)
+    mute_status=$(pamixer --get-mute)
 
-    if [[ "$mute_status" == "[on]" ]]; then
-        volume="♪: $volume"
+    if [[ "$mute_status" == "false" ]]; then
+        volume="♪: $volume%"
     else
-        volume="♪: muted ($volume)"
+        volume="♪: muted ($volume%)"
     fi
 
     out=$(acpi | grep 'Battery 1')

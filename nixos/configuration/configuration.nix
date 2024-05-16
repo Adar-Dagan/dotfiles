@@ -70,7 +70,6 @@
     wirelesstools
     alsa-utils
     bc
-    acpi
     pamixer
   ];
 
