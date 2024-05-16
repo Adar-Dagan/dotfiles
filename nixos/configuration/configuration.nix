@@ -71,6 +71,7 @@
     bc
     acpi
     pamixer
+    playerctl
   ];
 
   # List services that you want to enable:
