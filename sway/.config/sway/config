@@ -223,6 +223,4 @@ workspace 0 output eDP-1
 workspace number 1
 exec firefox
 
-seat * xcursor_theme Vimix-White 32
-
 include /etc/sway/config.d/*
