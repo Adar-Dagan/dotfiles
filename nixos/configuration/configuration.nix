@@ -69,6 +69,7 @@
     wdisplays
     rofi-wayland
     brave
+    pass-wayland
   ];
 
   # List services that you want to enable:
