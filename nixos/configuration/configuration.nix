@@ -68,6 +68,7 @@
     wdisplays
     rofi-wayland
     wirelesstools
+    alsa-utils
   ];
 
   # List services that you want to enable:
