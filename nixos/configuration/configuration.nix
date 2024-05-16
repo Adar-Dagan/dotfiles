@@ -67,7 +67,7 @@
     kanshi
     wdisplays
     rofi-wayland
-    brave
+    wirelesstools
   ];
 
   # List services that you want to enable:
