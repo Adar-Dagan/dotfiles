@@ -71,7 +71,6 @@
     kanshi
     wdisplays
     rofi-wayland
-    glib
     brave
   ];
 
@@ -138,7 +137,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --remember --time --cmd 'sway --unsupported-gpu'";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --asterisks --remember --time --cmd 'sway --unsupported-gpu'";
         user = "greeter";
       };
     };
