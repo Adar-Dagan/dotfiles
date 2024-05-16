@@ -70,6 +70,7 @@
     wirelesstools
     alsa-utils
     bc
+    acpi
   ];
 
   # List services that you want to enable:
