@@ -104,6 +104,9 @@
     };
     steam.enable = true;
     xwayland.enable = true;
+    gnupg.agent = {
+      enable = true;
+    };
   };
 
   services.gnome.gnome-keyring.enable = true;
