@@ -207,6 +207,11 @@ bindsym XF86AudioRaiseVolume exec 'pamixer -i 1'
 bindsym XF86AudioLowerVolume exec 'pamixer -d 1'
 bindsym XF86AudioMute exec 'pamixer -t'
 
+# Player control
+bindsym XF86AudioPlay exec 'playerctl play-pause'
+bindsym XF86AudioNext exec 'playerctl next'
+bindsym XF86AudioPrev exec 'playerctl previous'
+
 exec mako
 
 exec_always kanshi 

@@ -20,7 +20,7 @@ do
         volume="♪: muted ($volume%)"
     fi
 
-    out=$(acpi | grep 'Battery 1')
+    out=$(acpi | grep 'Battery 0')
     battery_info=""
     # Get the battery status
     battery_status=$(echo $out | awk -F': ' '{print $2}' | cut -d',' -f1)
