@@ -94,7 +94,10 @@
   system.stateVersion = "23.11"; # Did you read the comment?
 
   programs = {
-    firefox.enable = true;
+    firefox = {
+      enable = true;
+      package = pkgs.firefox-bin;
+    };
     sway = {
       enable = true;
       wrapperFeatures.gtk = true;
