@@ -20,31 +20,31 @@ do
         volume="♪: muted ($volume%)"
     fi
 
-    out=$(acpi | grep 'Battery 0')
+    out=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0)
     battery_info=""
     # Get the battery status
-    battery_status=$(echo $out | awk -F': ' '{print $2}' | cut -d',' -f1)
+    battery_status=$(echo "$out" | grep 'state:' | awk '{print $2}')
 
     # Get the battery percentage
-    battery_percentage=$(echo $out | awk -F', ' '{print $2}')
+    battery_percentage=$(echo "$out" | grep 'percentage:' | awk '{print $2}')
 
     # Get the remaining time
-    remaining_time=$(echo $out | awk -F', ' '{print $3}')
+    remaining_time=$(echo "$out" | grep 'time to empty:' | awk '{print $4, $5}')
 
     case "$battery_status" in
-        "Charging")
+        "charging")
             battery_info+="⚡ CHR"
             ;;
-        "Full")
+        "fully-charged")
             battery_info+="☻ FULL"
             ;;
-        "Not charging")
+        "pending-charge")
             battery_info+="☻ FULL"
             ;;
-        "Discharging")
+        "discharging")
             battery_info+="🔋 BAT"
             ;;
-        "Unknown")
+        "unknown")
             battery_info+="? UNK"
             ;;
         *)
@@ -56,7 +56,7 @@ do
     battery_info+=" $battery_percentage"
 
     # If the battery is charging or discharging, add the remaining time to the string
-    if [[ "$battery_status" == "Charging" ]] || [[ "$battery_status" == "Discharging" ]]; then
+    if [[ "$battery_status" == "charging" ]] || [[ "$battery_status" == "discharging" ]]; then
         calculated=$(echo $remaining_time | awk '{print $1}')
         if [[ "$calculated" =~ ^[0-9]{2} ]]; then
             battery_info+=" $remaining_time"
@@ -64,7 +64,7 @@ do
             battery_info+=" Calculating..."
         fi
     fi
-    
+
     echo -e "$volume | $wifi | $battery_info | $clock"
 
     # Attempt to sync the updates to full seconds

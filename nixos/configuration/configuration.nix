@@ -69,7 +69,6 @@
     rofi-wayland
     wirelesstools
     bc
-    acpi
     pamixer
     playerctl
   ];
