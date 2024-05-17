@@ -73,7 +73,6 @@
     dash
     gnome.gnome-system-monitor
     brave
-    chromium
   ];
 
   # List services that you want to enable:
