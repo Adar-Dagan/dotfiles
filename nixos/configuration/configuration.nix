@@ -137,6 +137,7 @@
   };
 
   services.upower.enable = true;
+  services.netdata.enable = true;
 
   # this is a life saver.
   # literally no documentation about this anywhere.
