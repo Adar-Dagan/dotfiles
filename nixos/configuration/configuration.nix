@@ -111,7 +111,6 @@
     light.enable = true;
   };
 
-  services.logkeys.enable = true;
   services.gnome.gnome-keyring.enable = true;
 
   hardware.bluetooth = {
