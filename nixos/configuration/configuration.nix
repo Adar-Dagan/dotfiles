@@ -72,6 +72,7 @@
     pamixer
     playerctl
     dash
+    monitor
   ];
 
   # List services that you want to enable:
