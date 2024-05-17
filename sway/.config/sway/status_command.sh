@@ -31,6 +31,9 @@ do
     # Get the remaining time
     remaining_time=$(echo "$out" | grep 'time to empty:' | awk '{print $4, $5}')
 
+    # Get time to full
+    time_to_full=$(echo "$out" | grep 'time to full:' | awk '{print $4, $5}')
+
     case "$battery_status" in
         "charging")
             battery_info+="⚡ CHR"
@@ -55,15 +58,7 @@ do
     # Build the string
     battery_info+=" $battery_percentage"
 
-    # If the battery is charging or discharging, add the remaining time to the string
-    if [[ "$battery_status" == "charging" ]] || [[ "$battery_status" == "discharging" ]]; then
-        calculated=$(echo $remaining_time | awk '{print $1}')
-        if [[ "$calculated" =~ ^[0-9]{2} ]]; then
-            battery_info+=" $remaining_time"
-        else
-            battery_info+=" Calculating..."
-        fi
-    fi
+    battery_info+=" $remaining_time$time_to_full"
 
     echo -e "$volume | $wifi | $battery_info | $clock"
 
