@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env dash
 
 while true
 do 
@@ -14,14 +14,13 @@ do
     volume=$(pamixer --get-volume)
     mute_status=$(pamixer --get-mute)
 
-    if [[ "$mute_status" == "false" ]]; then
+    if [ "$mute_status" = "false" ]; then
         volume="♪: $volume%"
     else
         volume="♪: muted ($volume%)"
     fi
 
     out=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0)
-    battery_info=""
     # Get the battery status
     battery_status=$(echo "$out" | grep 'state:' | awk '{print $2}')
 
@@ -36,31 +35,29 @@ do
 
     case "$battery_status" in
         "charging")
-            battery_info+="⚡ CHR"
+            battery_status="⚡ CHR"
             ;;
         "fully-charged")
-            battery_info+="☻ FULL"
+            battery_status="☻ FULL"
             ;;
         "pending-charge")
-            battery_info+="☻ FULL"
+            battery_status="☻ FULL"
             ;;
         "discharging")
-            battery_info+="🔋 BAT"
+            battery_status="🔋 BAT"
             ;;
         "unknown")
-            battery_info+="? UNK"
+            battery_status="? UNK"
             ;;
         *)
-            battery_info+="No battery"
+            battery_status="No battery"
             ;;
     esac
 
     # Build the string
-    battery_info+=" $battery_percentage"
+    battery_info="$battery_status $battery_percentage $remaining_time$time_to_full"
 
-    battery_info+=" $remaining_time$time_to_full"
-
-    echo -e "$volume | $wifi | $battery_info | $clock"
+    echo "$volume | $wifi | $battery_info | $clock"
 
     # Attempt to sync the updates to full seconds
     # Get the current time and calculate how long until the next full second
