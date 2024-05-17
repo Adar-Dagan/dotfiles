@@ -61,7 +61,6 @@
     zig
     ripgrep
     wl-clipboard
-    bottom
     zoxide
     fzf
     kanshi
@@ -72,7 +71,7 @@
     pamixer
     playerctl
     dash
-    monitor
+    gnome.gnome-system-monitor
   ];
 
   # List services that you want to enable:
