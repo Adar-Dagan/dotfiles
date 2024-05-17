@@ -72,7 +72,6 @@
     playerctl
     dash
     gnome.gnome-system-monitor
-    brave
   ];
 
   # List services that you want to enable:
