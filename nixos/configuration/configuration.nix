@@ -87,7 +87,7 @@
     fd
   ];
 
-  fonts.fonts = with pkgs; [iosevka];
+  fonts.fonts = with pkgs; [inconsolata];
 
   # List services that you want to enable:
 
