@@ -87,7 +87,7 @@
     fd
   ];
 
-  fonts.fonts = with pkgs; [jetbrains-mono];
+  fonts.fonts = with pkgs; [hack-font];
 
   # List services that you want to enable:
 
