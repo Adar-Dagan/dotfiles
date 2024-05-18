@@ -87,9 +87,6 @@
     fd
   ];
 
-  fonts.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["Hack"];})
-  ];
   fonts.enableDefaultPackages = true;
 
   # List services that you want to enable:
