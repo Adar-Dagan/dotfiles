@@ -75,6 +75,7 @@
     cargo
     rustc
     clippy
+    gcc
   ];
 
   # List services that you want to enable:
