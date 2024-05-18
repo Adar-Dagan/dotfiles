@@ -72,6 +72,9 @@
     playerctl
     dash
     gnome.gnome-system-monitor
+    cargo
+    rustc
+    clippy
   ];
 
   # List services that you want to enable:
