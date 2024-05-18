@@ -87,7 +87,7 @@
     fd
   ];
 
-  fonts.fonts = with pkgs; [inconsolata];
+  fonts.fonts = with pkgs; [jetbrains-mono];
 
   # List services that you want to enable:
 
