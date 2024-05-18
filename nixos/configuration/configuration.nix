@@ -78,6 +78,7 @@
     gcc
 
     unzip
+    stylua
   ];
 
   # List services that you want to enable:
