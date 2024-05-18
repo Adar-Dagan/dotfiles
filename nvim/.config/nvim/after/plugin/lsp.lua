@@ -29,8 +29,15 @@ require("lspconfig").lua_ls.setup(lua_opts)
 require("lspconfig").rust_analyzer.setup({
 	settings = {
 		["rust-analyzer"] = {
-			checkOnSave = {
-				command = "echo asdf",
+			check = {
+				command = "clippy",
+				extraArgs = {
+					"--",
+					"-Dclippy::pedantic",
+					"-Dclippy::nursery",
+					"-Wclipply::unwrap_used",
+					"-Dclippy::enum_glob_use",
+				},
 			},
 		},
 	},
