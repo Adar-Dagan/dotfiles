@@ -80,6 +80,7 @@
     rustc
     clippy
     rust-analyzer
+    bacon
 
     gcc
 
