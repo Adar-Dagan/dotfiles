@@ -87,9 +87,7 @@
     fd
   ];
 
-  fonts.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["Hack"];})
-  ];
+  fonts.fonts = with pkgs; [noto-fonts noto-fonts-extra];
 
   # List services that you want to enable:
 
