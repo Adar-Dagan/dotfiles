@@ -85,6 +85,8 @@
 
     unzip
     fd
+
+    (nerdfonts.override {fonts = ["Hack"];})
   ];
 
   # List services that you want to enable:
