@@ -72,9 +72,12 @@
     playerctl
     dash
     gnome.gnome-system-monitor
+
     cargo
     rustc
     clippy
+    rust-analyzer
+
     gcc
 
     unzip
