@@ -76,6 +76,8 @@
     rustc
     clippy
     gcc
+
+    unzip
   ];
 
   # List services that you want to enable:
