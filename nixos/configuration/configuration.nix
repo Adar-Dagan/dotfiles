@@ -73,6 +73,8 @@
     dash
     gnome.gnome-system-monitor
 
+    lua-language-server
+
     cargo
     rustc
     clippy
