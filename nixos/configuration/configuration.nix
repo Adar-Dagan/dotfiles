@@ -87,7 +87,9 @@
     fd
   ];
 
-  fonts.fonts = with pkgs; [hack-font];
+  fonts.fonts = with pkgs; [
+    (nerdfonts.override {fonts = ["Hack"];})
+  ];
 
   # List services that you want to enable:
 
