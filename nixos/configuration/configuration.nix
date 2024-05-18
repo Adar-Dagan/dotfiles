@@ -81,6 +81,7 @@
     clippy
     rust-analyzer
     bacon
+    rustfmt
 
     gcc
 
