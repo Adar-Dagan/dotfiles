@@ -85,7 +85,9 @@
 
     unzip
     fd
+  ];
 
+  fonts.packages = with pkgs; [
     (nerdfonts.override {fonts = ["Hack"];})
   ];
 
