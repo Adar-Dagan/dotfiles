@@ -23,26 +23,16 @@ lsp.on_attach(function(client, bufnr)
 	end, { desc = "[L]ine [D]iagnostics", buffer = bufnr })
 end)
 
-require("mason").setup({})
-require("mason-lspconfig").setup({
-	ensure_installed = {},
-	handlers = {
-		lsp.default_setup,
-		lua_ls = function()
-			local lua_opts = lsp.nvim_lua_ls()
-			require("lspconfig").lua_ls.setup(lua_opts)
-		end,
-		rust_analyzer = function()
-			require("lspconfig").rust_analyzer.setup({
-				settings = {
-					["rust-analyzer"] = {
-						checkOnSave = {
-							command = "clippy",
-						},
-					},
-				},
-			})
-		end,
+local lua_opts = lsp.nvim_lua_ls()
+require("lspconfig").lua_ls.setup(lua_opts)
+
+require("lspconfig").rust_analyzer.setup({
+	settings = {
+		["rust-analyzer"] = {
+			checkOnSave = {
+				command = "clippy",
+			},
+		},
 	},
 })
 

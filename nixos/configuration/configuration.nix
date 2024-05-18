@@ -74,6 +74,7 @@
     gnome.gnome-system-monitor
 
     lua-language-server
+    stylua
 
     cargo
     rustc
@@ -83,7 +84,7 @@
     gcc
 
     unzip
-    stylua
+    fd
   ];
 
   # List services that you want to enable:
