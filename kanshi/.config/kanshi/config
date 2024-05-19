@@ -3,6 +3,6 @@ profile laptop {
 }
 
 profile ilay {
-    output eDP-1 scale 1.5 position 1602,45
+    output eDP-1 scale 1.5 position 1373,26
     output "Samsung Electric Company S22C300 HMBDC00879" scale 1.4 position 0,0
 }

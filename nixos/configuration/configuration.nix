@@ -72,6 +72,7 @@
     playerctl
     dash
     gnome.gnome-system-monitor
+    zathura
 
     lua-language-server
     stylua
