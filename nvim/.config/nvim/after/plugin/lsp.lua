@@ -27,6 +27,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+require("lspconfig").pyright.setup({ capabilities = lsp_capabilities })
+
 require("lspconfig").lua_ls.setup({
 	capabilities = lsp_capabilities,
 	settings = {

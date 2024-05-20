@@ -91,6 +91,7 @@
 
     python3
     nodePackages.pyright
+    python311Packages.debugpy
 
     unzip
     fd
