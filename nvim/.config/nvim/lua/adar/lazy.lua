@@ -66,6 +66,7 @@ require("lazy").setup({
 	{ "L3MON4D3/LuaSnip" },
 
 	{ "mfussenegger/nvim-dap" },
+	{ "mfussenegger/nvim-dap-python" },
 }, {
 	git = {
 		timeout = 300,
