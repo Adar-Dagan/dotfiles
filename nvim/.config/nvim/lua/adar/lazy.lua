@@ -26,15 +26,7 @@ require("lazy").setup({
 	{ "tpope/vim-fugitive" },
 	{ "github/copilot.vim" },
 	{ "tpope/vim-commentary" },
-	{ "mfussenegger/nvim-dap" },
-	{ "mfussenegger/nvim-dap-python" },
-	{ "ThePrimeagen/vim-be-good" },
-	{
-		"j-hui/fidget.nvim",
-		opts = {
-			-- options
-		},
-	},
+	{ "j-hui/fidget.nvim" },
 	{
 		"ThePrimeagen/harpoon",
 		branch = "harpoon2",
@@ -45,9 +37,6 @@ require("lazy").setup({
 		opts = {},
 		-- Optional dependencies
 		dependencies = { "nvim-tree/nvim-web-devicons" },
-	},
-	{
-		"luk400/vim-jukit",
 	},
 	{ "lewis6991/gitsigns.nvim" },
 	{ "stevearc/conform.nvim" },
@@ -70,10 +59,6 @@ require("lazy").setup({
 			-- refer to the configuration section below
 		},
 	},
-
-	--- Uncomment the two plugins below if you want to manage the language servers from neovim
-	-- { "williamboman/mason.nvim" },
-	-- { "williamboman/mason-lspconfig.nvim" },
 
 	{ "neovim/nvim-lspconfig" },
 	{ "hrsh7th/cmp-nvim-lsp" },

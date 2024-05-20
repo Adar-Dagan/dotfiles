@@ -89,6 +89,9 @@
 
     gcc
 
+    python3
+    nodePackages.pyright
+
     unzip
     fd
   ];

@@ -21,6 +21,8 @@ set $term foot
 # set $menu dmenu_path | dmenu | xargs swaymsg exec --
 set $menu rofi -show run 
 
+output * bg #0f0f0f solid_color
+
 
 ### Idle configuration
 #
