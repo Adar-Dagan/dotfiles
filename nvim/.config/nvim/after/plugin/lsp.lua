@@ -29,23 +29,9 @@ local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 require("lspconfig").pyright.setup({ capabilities = lsp_capabilities })
 
+require("neodev").setup({})
 require("lspconfig").lua_ls.setup({
 	capabilities = lsp_capabilities,
-	settings = {
-		Lua = {
-			runtime = {
-				"LuaJIT",
-			},
-			diagnostics = {
-				globals = { "vim" },
-			},
-			workspace = {
-				library = {
-					vim.env.VIMRUNTIME,
-				},
-			},
-		},
-	},
 })
 
 require("lspconfig").rust_analyzer.setup({

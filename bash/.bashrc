@@ -4,3 +4,5 @@ export PATH=$PATH:~/dotfiles/nixos
 export PATH=$PATH:~/dotfiles/stow
 
 eval "$(zoxide init bash)"
+
+alias nvim="nvim ."

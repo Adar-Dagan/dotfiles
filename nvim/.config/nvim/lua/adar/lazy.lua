@@ -64,9 +64,11 @@ require("lazy").setup({
 	{ "hrsh7th/cmp-nvim-lsp" },
 	{ "hrsh7th/nvim-cmp" },
 	{ "L3MON4D3/LuaSnip" },
+	{ "folke/neodev.nvim", opts = {} },
 
 	{ "mfussenegger/nvim-dap" },
 	{ "mfussenegger/nvim-dap-python" },
+	{ "theHamsta/nvim-dap-virtual-text" },
 }, {
 	git = {
 		timeout = 300,

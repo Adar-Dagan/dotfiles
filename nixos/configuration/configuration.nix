@@ -77,6 +77,7 @@
     dash
     gnome.gnome-system-monitor
     zathura
+    thefuck
 
     lua-language-server
     stylua

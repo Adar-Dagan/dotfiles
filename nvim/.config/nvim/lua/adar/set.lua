@@ -1,4 +1,4 @@
-vim.opt.nu = true
+vim.opt.number = true
 vim.opt.relativenumber = true
 
 vim.opt.tabstop = 4
@@ -27,7 +27,5 @@ vim.opt.colorcolumn = "80"
 vim.opt.mouse = ""
 vim.keymap.set({ "", "i" }, "<up>", "<nop>")
 vim.keymap.set({ "", "i" }, "<down>", "<nop>")
-
-vim.o.exrc = true
 
 vim.opt.spell = true

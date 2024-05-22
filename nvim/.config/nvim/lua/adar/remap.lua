@@ -9,3 +9,13 @@ vim.keymap.set("n", "n", "nzz")
 
 vim.keymap.set("v", "<leader>p", '"_dP')
 vim.keymap.set("v", "<leader>y", '"+y')
+
+vim.keymap.set("n", "<c-j>", "<c-w><c-j>")
+vim.keymap.set("n", "<c-k>", "<c-w><c-k>")
+vim.keymap.set("n", "<c-l>", "<c-w><c-l>")
+vim.keymap.set("n", "<c-h>", "<c-w><c-h>")
+
+vim.keymap.set("n", "<M-h>", "<c-w>5<")
+vim.keymap.set("n", "<M-l>", "<c-w>5>")
+vim.keymap.set("n", "<M-k>", "<C-W>+")
+vim.keymap.set("n", "<M-j>", "<C-W>-")
