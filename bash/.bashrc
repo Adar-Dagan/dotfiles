@@ -6,3 +6,5 @@ export PATH=$PATH:~/dotfiles/stow
 eval "$(zoxide init bash)"
 
 alias nvim="nvim ."
+
+eval "$(thefuck --alias)"

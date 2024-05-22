@@ -78,6 +78,7 @@
     gnome.gnome-system-monitor
     zathura
     thefuck
+    bat
 
     lua-language-server
     stylua
