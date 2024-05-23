@@ -194,13 +194,13 @@
 
   system.autoUpgrade = {
     enable = true;
-    flake = "/etc/nixos#nixos";
+    flake = "''";
     flags = [
       "--update-input"
       "nixpkgs"
       "-L" # print build logs
     ];
-    dates = "07:46";
+    dates = "07:48";
     randomizedDelaySec = "1min";
   };
 }
