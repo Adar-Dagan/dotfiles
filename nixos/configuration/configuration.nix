@@ -200,7 +200,7 @@
       "nixpkgs"
       "-L" # print build logs
     ];
-    dates = "07:48";
+    dates = "07:50";
     randomizedDelaySec = "1min";
   };
 }
