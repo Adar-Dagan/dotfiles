@@ -78,6 +78,7 @@
     gnome.gnome-system-monitor
     zathura
     thefuck
+    evolution-ews
 
     lua-language-server
     stylua
