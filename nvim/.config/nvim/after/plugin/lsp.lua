@@ -51,6 +51,10 @@ require("lspconfig").rust_analyzer.setup({
 	},
 })
 
+require("lspconfig").nil_ls.setup({
+	capabilities = lsp_capabilities,
+})
+
 local cmp = require("cmp")
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
