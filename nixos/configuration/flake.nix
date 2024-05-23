@@ -48,6 +48,7 @@
               "--update-input"
               "nixpkgs"
               "-L" # print build logs
+              "--commit-lock-file"
             ];
             dates = "07:00";
             randomizedDelaySec = "45min";
