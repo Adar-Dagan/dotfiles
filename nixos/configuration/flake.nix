@@ -39,21 +39,6 @@
 
           # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
         }
-
-        {
-          system.autoUpgrade = {
-            enable = true;
-            flake = inputs.self.outPath;
-            flags = [
-              "--update-input"
-              "nixpkgs"
-              "-L" # print build logs
-              "--commit-lock-file"
-            ];
-            dates = "07:00";
-            randomizedDelaySec = "5min";
-          };
-        }
       ];
     };
   };

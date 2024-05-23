@@ -191,4 +191,15 @@
   nix.settings.auto-optimise-store = true;
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
+
+  system.autoUpgrade = {
+    enable = true;
+    flags = [
+      "--update-input"
+      "nixpkgs"
+      "-L" # print build logs
+    ];
+    dates = "07:03";
+    randomizedDelaySec = "1min";
+  };
 }
