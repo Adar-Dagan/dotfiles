@@ -34,6 +34,10 @@ require("lspconfig").lua_ls.setup({
 	capabilities = lsp_capabilities,
 })
 
+require("lspconfig").nil_ls.setup({
+	capabilities = lsp_capabilities,
+})
+
 require("lspconfig").rust_analyzer.setup({
 	capabilities = lsp_capabilities,
 	settings = {
@@ -49,10 +53,6 @@ require("lspconfig").rust_analyzer.setup({
 			},
 		},
 	},
-})
-
-require("lspconfig").nil_ls.setup({
-	capabilities = lsp_capabilities,
 })
 
 local cmp = require("cmp")

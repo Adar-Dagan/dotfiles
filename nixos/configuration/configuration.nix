@@ -87,6 +87,7 @@
     clippy
     rust-analyzer
     rustfmt
+    gdb
 
     gcc
 

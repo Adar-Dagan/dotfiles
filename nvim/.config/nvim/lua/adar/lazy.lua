@@ -26,7 +26,12 @@ require("lazy").setup({
 	{ "tpope/vim-fugitive" },
 	{ "github/copilot.vim" },
 	{ "tpope/vim-commentary" },
-	{ "j-hui/fidget.nvim" },
+	{
+		"j-hui/fidget.nvim",
+		opts = {
+			-- options
+		},
+	},
 	{
 		"ThePrimeagen/harpoon",
 		branch = "harpoon2",
