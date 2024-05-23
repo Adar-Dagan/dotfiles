@@ -78,7 +78,7 @@
     gnome.gnome-system-monitor
     zathura
     thefuck
-    thunderbird
+    evolution
 
     lua-language-server
     stylua
