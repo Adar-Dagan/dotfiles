@@ -93,6 +93,8 @@
     python3
     nodePackages.pyright
 
+    nil
+
     unzip
     fd
   ];
