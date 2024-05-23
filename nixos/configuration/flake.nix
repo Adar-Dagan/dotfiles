@@ -51,7 +51,7 @@
               "--commit-lock-file"
             ];
             dates = "07:00";
-            randomizedDelaySec = "45min";
+            randomizedDelaySec = "5min";
           };
         }
       ];
