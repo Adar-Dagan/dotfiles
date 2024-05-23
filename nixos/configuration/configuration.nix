@@ -194,12 +194,13 @@
 
   system.autoUpgrade = {
     enable = true;
+    flake = "/etc/nixos/flake.nix#adar";
     flags = [
       "--update-input"
       "nixpkgs"
       "-L" # print build logs
     ];
-    dates = "07:03";
+    dates = "07:18";
     randomizedDelaySec = "1min";
   };
 }
