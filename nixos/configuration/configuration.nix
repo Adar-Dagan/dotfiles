@@ -78,7 +78,6 @@
     gnome.gnome-system-monitor
     zathura
     thefuck
-    evolution
 
     lua-language-server
     stylua
@@ -140,6 +139,7 @@
     steam.enable = true;
     xwayland.enable = true;
     light.enable = true;
+    evolution.enable = true;
   };
 
   services.gnome.gnome-keyring.enable = true;
