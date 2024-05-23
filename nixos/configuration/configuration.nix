@@ -194,7 +194,7 @@
 
   system.autoUpgrade = {
     enable = true;
-    flake = "/etc/nixos#adar";
+    flake = "/etc/nixos#nixos";
     flags = [
       "--update-input"
       "nixpkgs"
