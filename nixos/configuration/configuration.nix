@@ -87,6 +87,7 @@
     pkgs-unstable.rustc
     pkgs-unstable.clippy
     pkgs-unstable.cargo
+    pkgs-unstable.rustfmt
 
     gcc
 

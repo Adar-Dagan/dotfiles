@@ -42,14 +42,8 @@ require("lspconfig").rust_analyzer.setup({
 	capabilities = lsp_capabilities,
 	settings = {
 		["rust-analyzer"] = {
-			check = {
+			checkOnSave = {
 				command = "clippy",
-				extraArgs = {
-					"--",
-					"-Dclippy::enum_glob_use",
-					"-Dclippy::pedantic",
-					"-Dclippy::nursery",
-				},
 			},
 		},
 	},
