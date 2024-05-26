@@ -84,6 +84,9 @@
     stylua
 
     pkgs-unstable.rust-analyzer
+    pkgs-unstable.rustc
+    pkgs-unstable.clippy
+    pkgs-unstable.cargo
 
     gcc
 
