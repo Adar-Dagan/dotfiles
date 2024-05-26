@@ -4,6 +4,7 @@
 {
   config,
   pkgs,
+  pkgs-unstable,
   ...
 }: {
   imports = [
@@ -82,11 +83,7 @@
     lua-language-server
     stylua
 
-    cargo
-    rustc
-    clippy
-    rust-analyzer
-    rustfmt
+    pkgs-unstable.rust-analyzer
 
     gcc
 
