@@ -201,6 +201,8 @@
     flags = [
       "--update-input"
       "nixpkgs"
+      "--update-input"
+      "nixpkgs-unstable"
       "-L" # print build logs
     ];
     dates = "07:00";
