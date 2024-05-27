@@ -205,7 +205,7 @@
       "nixpkgs-unstable"
       "-L" # print build logs
     ];
-    dates = "07:00";
-    randomizedDelaySec = "45min";
+    dates = "08:26";
+    randomizedDelaySec = "1min";
   };
 }
