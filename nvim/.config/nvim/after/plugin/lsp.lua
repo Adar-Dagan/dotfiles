@@ -22,6 +22,15 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.keymap.set("n", "<leader>ld", function()
 			vim.diagnostic.open_float()
 		end, { desc = "[L]ine [D]iagnostics", buffer = bufnr })
+		vim.keymap.set("i", "<C-h>", function()
+			vim.lsp.buf.signature_help()
+		end, { desc = "[S]ignature [H]elp", buffer = bufnr })
+		vim.keymap.set("n", "<leader>nd", function()
+			vim.diagnostic.goto_next()
+		end, { desc = "[N]ext [D]iagnostic", buffer = bufnr })
+		vim.keymap.set("n", "<leader>pd", function()
+			vim.diagnostic.goto_prev()
+		end, { desc = "[P]revious [D]iagnostic", buffer = bufnr })
 	end,
 })
 
@@ -55,6 +64,7 @@ local cmp_select = { behavior = cmp.SelectBehavior.Select }
 cmp.setup({
 	sources = {
 		{ name = "nvim_lsp" },
+		{ name = "supermaven" },
 	},
 	mapping = cmp.mapping.preset.insert({
 		-- `Enter` key to confirm completion

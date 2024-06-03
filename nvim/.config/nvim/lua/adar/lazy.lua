@@ -24,8 +24,13 @@ require("lazy").setup({
 	{ "nvim-treesitter/playground" },
 	{ "mbbill/undotree" },
 	{ "tpope/vim-fugitive" },
-	{ "github/copilot.vim" },
 	{ "tpope/vim-commentary" },
+	{
+		"supermaven-inc/supermaven-nvim",
+		config = function()
+			require("supermaven-nvim").setup({})
+		end,
+	},
 	{
 		"j-hui/fidget.nvim",
 		opts = {
