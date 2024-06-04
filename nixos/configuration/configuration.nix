@@ -79,6 +79,7 @@
     gnome.gnome-system-monitor
     zathura
     thefuck
+    floorp
 
     lua-language-server
     stylua
