@@ -230,6 +230,6 @@ workspace 9 output eDP-1
 workspace 10 output eDP-1 
 
 workspace number 1
-exec firefox
+exec floorp
 
 include /etc/sway/config.d/*

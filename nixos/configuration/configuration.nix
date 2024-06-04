@@ -126,9 +126,6 @@
   system.stateVersion = "23.11"; # Did you read the comment?
 
   programs = {
-    firefox = {
-      enable = true;
-    };
     sway = {
       enable = true;
       wrapperFeatures.gtk = true;
