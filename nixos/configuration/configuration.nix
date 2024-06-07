@@ -80,6 +80,7 @@
     zathura
     thefuck
     floorp
+    spotify
 
     lua-language-server
     stylua
