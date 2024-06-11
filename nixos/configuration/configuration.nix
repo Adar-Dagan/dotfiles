@@ -4,7 +4,6 @@
 {
   config,
   pkgs,
-  pkgs-unstable,
   ...
 }: {
   imports = [
@@ -85,16 +84,16 @@
     lua-language-server
     stylua
 
-    pkgs-unstable.rust-analyzer
-    pkgs-unstable.rustc
-    pkgs-unstable.clippy
-    pkgs-unstable.cargo
-    pkgs-unstable.rustfmt
+    rust-analyzer
+    rustc
+    clippy
+    cargo
+    rustfmt
 
     gcc
 
     python3
-    nodePackages.pyright
+    pyright
 
     nil
 
@@ -200,8 +199,6 @@
     flags = [
       "--update-input"
       "nixpkgs"
-      "--update-input"
-      "nixpkgs-unstable"
       "-L" # print build logs
     ];
     dates = "07:00";

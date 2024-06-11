@@ -2,8 +2,7 @@
   description = "A simple NixOS flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager/release-24.05";
       # The `follows` keyword in inputs is used for inheritance.
@@ -17,17 +16,11 @@
   outputs = {
     self,
     nixpkgs,
-    nixpkgs-unstable,
     home-manager,
     ...
   } @ inputs: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem rec {
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = {
-        pkgs-unstable = import nixpkgs-unstable {
-          inherit system;
-        };
-      };
       modules = [
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
