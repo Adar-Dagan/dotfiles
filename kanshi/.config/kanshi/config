@@ -2,7 +2,7 @@ profile laptop {
     output eDP-1 scale 1.5 position 0,0
 }
 
-profile ilay {
-    output eDP-1 scale 1.5 position 1373,26
-    output "Samsung Electric Company S22C300 HMBDC00879" scale 1.4 position 0,0
+profile home {
+    output eDP-1 scale 1.5 position 1920,140
+    output "LG Electronics LG HDR 4K 0x00046385" scale 2 position 0,0
 }
