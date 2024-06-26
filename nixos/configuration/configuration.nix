@@ -80,6 +80,7 @@
     thefuck
     floorp
     spotify
+    firefox
 
     lua-language-server
     stylua
