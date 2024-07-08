@@ -47,6 +47,10 @@ require("lspconfig").nil_ls.setup({
 	capabilities = lsp_capabilities,
 })
 
+require("lspconfig").clangd.setup({
+	capabilities = lsp_capabilities,
+})
+
 require("lspconfig").rust_analyzer.setup({
 	capabilities = lsp_capabilities,
 	settings = {
