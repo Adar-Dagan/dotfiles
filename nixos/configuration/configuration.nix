@@ -81,6 +81,7 @@
     floorp
     spotify
     firefox
+    google-chrome
 
     lua-language-server
     stylua
