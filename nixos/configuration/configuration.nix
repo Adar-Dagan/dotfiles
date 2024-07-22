@@ -52,7 +52,6 @@
   nixpkgs.config.allowUnfree = true;
 
   xdg.mime = {
-    enable = true;
     defaultApplications = {
       "application/pdf" = ["org.pwmt.zathura-pdf-mupdf.desktop"];
     };
