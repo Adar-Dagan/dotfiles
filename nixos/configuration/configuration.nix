@@ -52,7 +52,7 @@
   nixpkgs.config.allowUnfree = true;
 
   xdg.mime.defaultApplications = {
-    "application/pdf" = "zathura.desktop";
+    "application/pdf" = ["zathura.desktop"];
   };
 
   # List packages installed in system profile. To search, run:
