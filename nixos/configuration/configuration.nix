@@ -51,8 +51,11 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  xdg.mime.defaultApplications = {
-    "application/pdf" = ["zathura.desktop"];
+  xdg.mime = {
+    enable = true;
+    defaultApplications = {
+      "application/pdf" = ["zathura.desktop"];
+    };
   };
 
   # List packages installed in system profile. To search, run:
