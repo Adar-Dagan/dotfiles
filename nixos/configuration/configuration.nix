@@ -95,6 +95,8 @@
     rustfmt
 
     gcc
+    clang
+    clang-tools
 
     python3
     pyright

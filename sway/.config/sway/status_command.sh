@@ -1,7 +1,7 @@
 #!/usr/bin/env dash
 
-while true
-do 
+# while true
+# do 
     clock=$(date +'%Y-%m-%d %H:%M:%S')
 
     wifi=$(iwgetid -r | tr -d '\n')
@@ -57,7 +57,18 @@ do
     # Build the string
     battery_info="$battery_status $battery_percentage $remaining_time$time_to_full"
 
-    echo "$volume | $wifi | $battery_info | $clock"
+    # Get Language information
+    language=$(swaymsg -t get_inputs)
+
+    if echo "$language" | grep -q '"xkb_active_layout_name": "English (US)"'; then
+        language="EN"
+    elif echo "$language" | grep -q '"xkb_active_layout_name": "Hebrew"'; then
+        language="HE"
+    else
+        language="??"
+    fi
+
+    echo "$volume | $wifi | $battery_info | $clock | $language"
 
     # Attempt to sync the updates to full seconds
     # Get the current time and calculate how long until the next full second
@@ -65,5 +76,5 @@ do
     sleep_time=$(echo "1 - ($current_time - $(date +%s))" | bc)
 
     # Sleep until the next full second
-    sleep $sleep_time
-done
+    # sleep $sleep_time
+# done
