@@ -107,6 +107,7 @@
 
     unzip
     fd
+    tmux
   ];
 
   fonts.packages = with pkgs; [
