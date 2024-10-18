@@ -104,6 +104,7 @@
     nil
 
     nodejs
+    tree-sitter
 
     unzip
     fd
