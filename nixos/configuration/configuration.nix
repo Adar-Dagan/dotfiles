@@ -103,6 +103,8 @@
 
     nil
 
+    nodejs
+
     unzip
     fd
   ];
