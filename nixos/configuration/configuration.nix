@@ -104,6 +104,7 @@
     nil
 
     nodejs
+    typescript-language-server
     tree-sitter
 
     unzip
