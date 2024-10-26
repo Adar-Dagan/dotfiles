@@ -100,6 +100,7 @@
 
     python3
     pyright
+    playwright
 
     nil
 
