@@ -101,6 +101,7 @@
     python3
     pyright
     playwright
+    chromium
 
     nil
 
