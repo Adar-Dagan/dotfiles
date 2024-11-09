@@ -112,6 +112,8 @@
     unzip
     fd
     tmux
+
+    zls
   ];
 
   fonts.packages = with pkgs; [
