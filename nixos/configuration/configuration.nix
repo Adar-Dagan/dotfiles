@@ -225,4 +225,6 @@
     # Add any missing dynamic libraries for unpackaged programs
     # here, NOT in environment.systemPackages
   ];
+
+  services.blueman.enable = true;
 }

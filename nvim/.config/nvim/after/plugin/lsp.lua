@@ -55,6 +55,10 @@ require("lspconfig").ts_ls.setup({
 	capabilities = lsp_capabilities,
 })
 
+require("lspconfig").zls.setup({
+	capabilities = lsp_capabilities,
+})
+
 require("lspconfig").rust_analyzer.setup({
 	capabilities = lsp_capabilities,
 	settings = {
