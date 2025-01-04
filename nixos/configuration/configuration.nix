@@ -77,13 +77,13 @@
     pamixer
     playerctl
     dash
-    gnome.gnome-system-monitor
     zathura
     thefuck
     floorp
     spotify
     firefox
     google-chrome
+    btop
 
     lua-language-server
     stylua
@@ -117,7 +117,7 @@
   ];
 
   fonts.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["Hack"];})
+    nerd-fonts.hack
   ];
   fonts.enableDefaultPackages = true;
 
