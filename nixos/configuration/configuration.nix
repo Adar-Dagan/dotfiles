@@ -94,7 +94,7 @@
     clang
     clang-tools
 
-    python3
+    python313
     pyright
     playwright
     chromium
