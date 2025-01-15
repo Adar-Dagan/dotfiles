@@ -41,7 +41,6 @@
     isNormalUser = true;
     description = "Adar";
     extraGroups = ["networkmanager" "wheel" "video"];
-    packages = with pkgs; [];
   };
 
   # Allow unfree packages
