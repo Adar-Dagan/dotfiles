@@ -79,6 +79,7 @@
     firefox
     google-chrome
     btop
+    bat
 
     lua-language-server
     stylua
