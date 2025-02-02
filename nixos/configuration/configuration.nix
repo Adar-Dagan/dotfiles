@@ -79,6 +79,7 @@
     firefox
     google-chrome
     btop
+    vscode
     bat
 
     lua-language-server
