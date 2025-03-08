@@ -82,35 +82,22 @@
     vscode
     bat
 
-    lua-language-server
-    stylua
-
-    rust-analyzer
-    rustc
-    clippy
     cargo
-    rustfmt
 
     gcc
     clang
-    clang-tools
 
     python312
-    pyright
-    playwright
     chromium
 
     nil
 
     nodejs
-    typescript-language-server
     tree-sitter
 
     unzip
     fd
     tmux
-
-    zls
   ];
 
   fonts.packages = with pkgs; [
