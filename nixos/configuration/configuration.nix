@@ -85,7 +85,7 @@
     cargo
 
     gcc
-    clang
+    libclang
 
     python312
     chromium
