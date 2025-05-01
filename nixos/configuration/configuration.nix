@@ -208,7 +208,7 @@
 
   system.autoUpgrade = {
     enable = true;
-    flake = "path:/home/adar/dotfiles/nixos/configuration/flake.nix";
+    flake = "path:/home/adar/dotfiles/nixos/configuration/flake.nix#nixos";
     flags = [
       "--update-input"
       "nixpkgs"
