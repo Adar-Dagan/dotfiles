@@ -232,8 +232,9 @@
 
     script = let
       nixos-rebuild = "${config.system.build.nixos-rebuild}/bin/nixos-rebuild";
+      nix = "${config.system.build.nixos-rebuild}/bin/nix";
     in ''
-      nix flake upadate /etc/nixos/flake.nix
+      ${nix} flake update /etc/nixos/flake.nix
       ${nixos-rebuild} switch --flake /etc/nixos/flake.nix
     '';
   };
