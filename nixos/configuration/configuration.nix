@@ -226,14 +226,15 @@
 
   services.blueman.enable = true;
 
-  # systemd.services.nix-upgrade = {
-  #   description = "Nixos Upgrade";
-  #   restartIfChanged = false;
-  #
-  #   script = let
-  #   nixos-rebuild = "${config.system.build.nixos-rebuild}/bin/nixos-rebuild";
-  #   in
-  #   ''
-  #     ${nixos-rebuild
-  # };
+  systemd.services.nix-upgrade = {
+    description = "Nixos Upgrade";
+    restartIfChanged = false;
+
+    script = let
+      nixos-rebuild = "${config.system.build.nixos-rebuild}/bin/nixos-rebuild";
+    in ''
+      nix flake upadate /etc/nixos/flake.nix
+      ${nixos-rebuild} switch --flake /etc/nixos/flake.nix
+    '';
+  };
 }
