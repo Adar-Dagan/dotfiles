@@ -225,18 +225,4 @@
   ];
 
   services.blueman.enable = true;
-
-  systemd.services.nix-upgrade = {
-    description = "Nixos Upgrade";
-    restartIfChanged = false;
-
-    script = let
-      nixos-rebuild = "${config.system.build.nixos-rebuild}/bin/nixos-rebuild";
-      # nix-flake = "${config.system.build.nix}/bin/nix";
-    in ''
-      echo "Current user: $(whoami)" >&2
-        /run/current-system/sw/bin/nix flake update --flake /etc/nixos/
-        ${nixos-rebuild} switch --flake /etc/nixos/flake.nix
-    '';
-  };
 }
