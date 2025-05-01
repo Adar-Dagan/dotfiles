@@ -234,7 +234,7 @@
       nixos-rebuild = "${config.system.build.nixos-rebuild}/bin/nixos-rebuild";
       # nix-flake = "${config.system.build.nix}/bin/nix";
     in ''
-      /run/current-system/sw/bin/nix flake update --flake /etc/nixos/flake.nix
+      /run/current-system/sw/bin/nix flake update --flake /etc/nixos/
       ${nixos-rebuild} switch --flake /etc/nixos/flake.nix
     '';
   };
