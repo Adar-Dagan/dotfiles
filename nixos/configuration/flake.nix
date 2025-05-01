@@ -37,6 +37,25 @@
 
           # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
         }
+
+        ({
+          config,
+          pkgs,
+          ...
+        }: {
+          system.autoUpgrade = {
+            enable = true;
+            flake = self.outPath;
+            flags = [
+              "--update-input"
+              "nixpkgs"
+              "--no-write-lock-file"
+              "-L"
+            ];
+            dates = "02:00";
+            randomizedDelaySec = "45min";
+          };
+        })
       ];
     };
   };
