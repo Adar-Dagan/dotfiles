@@ -1,7 +1,11 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -221,4 +225,15 @@
   ];
 
   services.blueman.enable = true;
+
+  # systemd.services.nix-upgrade = {
+  #   description = "Nixos Upgrade";
+  #   restartIfChanged = false;
+  #
+  #   script = let
+  #   nixos-rebuild = "${config.system.build.nixos-rebuild}/bin/nixos-rebuild";
+  #   in
+  #   ''
+  #     ${nixos-rebuild
+  # };
 }
