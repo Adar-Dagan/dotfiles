@@ -207,18 +207,6 @@
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  system.autoUpgrade = {
-    enable = true;
-    flake = "''";
-    flags = [
-      "--update-input"
-      "nixpkgs"
-      "-L" # print build logs
-    ];
-    dates = "12:00";
-    randomizedDelaySec = "45min";
-  };
-
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
     # Add any missing dynamic libraries for unpackaged programs

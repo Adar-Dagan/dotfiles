@@ -25,6 +25,10 @@ fi
 # Shows your changes
 git diff -U0 '*.nix'
 
+echo "Updating flake..."
+
+nix flake update
+
 echo "NixOS Rebuilding..."
 
 # Rebuild, output simplified errors, log trackebacks
