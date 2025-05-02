@@ -85,6 +85,7 @@
     btop
     vscode
     bat
+    discord
 
     cargo
 
