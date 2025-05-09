@@ -10,7 +10,7 @@
   home.pointerCursor = {
     name = "Adwaita";
     package = pkgs.adwaita-icon-theme;
-    size = 18;
+    size = 10;
     x11 = {
       enable = true;
       defaultCursor = "Adwaita";
