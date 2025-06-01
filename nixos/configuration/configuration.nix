@@ -90,7 +90,6 @@
     cargo
 
     gcc
-    clang
     bear
     gnumake
     lua-language-server
