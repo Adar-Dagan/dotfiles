@@ -90,7 +90,8 @@
     cargo
 
     gcc
-    llvmPackages_20.clang
+    clang
+    bear
 
     python312
     chromium
