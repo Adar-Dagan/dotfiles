@@ -94,7 +94,6 @@
     bear
     gnumake
     lua-language-server
-    stylua
 
     python312
     chromium
