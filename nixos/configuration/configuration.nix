@@ -90,7 +90,7 @@
     cargo
 
     gcc
-    clang
+    libclang
     bear
 
     python312
