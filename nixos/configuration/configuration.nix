@@ -77,7 +77,7 @@
     playerctl
     dash
     zathura
-    thefuck
+    pay-respects
     floorp
     spotify
     firefox
@@ -93,6 +93,7 @@
     libclang
     bear
     gnumake
+    lua-language-server
 
     python312
     chromium
