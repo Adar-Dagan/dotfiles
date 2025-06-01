@@ -6,4 +6,4 @@ export PATH=$PATH:~/zig_compiler
 
 eval "$(zoxide init bash)"
 
-eval "$(thefuck --alias)"
+eval "$(pay-respects bash --alias)"
