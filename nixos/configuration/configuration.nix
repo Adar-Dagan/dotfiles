@@ -92,6 +92,7 @@
     gcc
     libclang
     bear
+    gnumake
 
     python312
     chromium
