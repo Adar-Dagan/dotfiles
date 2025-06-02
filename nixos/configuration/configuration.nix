@@ -92,6 +92,7 @@
     gcc
     clang
     clang-tools
+    cmake
     bear
     gnumake
     lua-language-server
