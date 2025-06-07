@@ -92,7 +92,7 @@
     gcc
     clang
     clang-tools
-    llvmPackages.libcxxStdenv
+    clangStdenv
     cmake
     bear
     gnumake
