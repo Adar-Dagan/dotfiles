@@ -92,6 +92,7 @@
     gcc
     clang
     clang-tools
+    libcxx
     cmake
     bear
     gnumake
