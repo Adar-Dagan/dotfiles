@@ -77,7 +77,7 @@
     dash
     zathura
     pay-respects
-    floorp-bin
+    floorp
     spotify
     firefox
     google-chrome
@@ -184,7 +184,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --asterisks --remember --time --cmd 'sway --unsupported-gpu'";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --asterisks --remember --time --cmd 'sway --unsupported-gpu'";
         user = "greeter";
       };
     };
