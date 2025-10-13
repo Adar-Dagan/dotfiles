@@ -70,15 +70,14 @@
     fzf
     kanshi
     wdisplays
-    rofi-wayland
+    rofi
     wirelesstools
     bc
-    pamixer
     playerctl
     dash
     zathura
     pay-respects
-    floorp
+    floorp-bin
     spotify
     firefox
     google-chrome
@@ -88,6 +87,7 @@
     discord
 
     cargo
+    rust-analyzer
 
     gcc
     clang
@@ -110,6 +110,8 @@
     unzip
     fd
     tmux
+    hugo
+    go
   ];
 
   fonts.packages = with pkgs; [
@@ -182,7 +184,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --asterisks --remember --time --cmd 'sway --unsupported-gpu'";
+        command = "${pkgs.tuigreet}/bin/tuigreet --asterisks --remember --time --cmd 'sway --unsupported-gpu'";
         user = "greeter";
       };
     };
