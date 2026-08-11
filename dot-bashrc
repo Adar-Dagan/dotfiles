@@ -1,9 +1,42 @@
 [[ $- != *i* ]] && return
 
+# Machine-specific setup (PATH, package managers, ...). Not tracked in the
+# dotfiles repo; create it per machine if needed. Must come first so the
+# tools configured below can be found.
+[ -f ~/.bashrc.local ] && . ~/.bashrc.local
+
+HISTCONTROL=ignoreboth
+shopt -s histappend
+HISTSIZE=100000
+HISTFILESIZE=200000
+
+shopt -s checkwinsize
+shopt -s globstar
+
+# make less handle non-text input (archives, pdfs, ...)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# LS_COLORS, used by ls, eza, tree, fzf previews, ...
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+fi
+
 alias grep='grep --color=auto'
-PS1='[\u \w]\$ '
+PS1='[\[\033[01;32m\]\u\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\]]\$ '
+
+# programmable completion; Ubuntu only loads this for login shells via
+# /etc/profile.d, so non-login interactive shells need it here
+if ! shopt -oq posix; then
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+        . /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+    fi
+fi
 
 eval "$(zoxide init bash)"
 eval "$(fzf --bash)"
+eval "$(pay-respects bash --alias)"
 
 alias e='eza -la'

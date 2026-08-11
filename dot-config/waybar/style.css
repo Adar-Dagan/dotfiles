@@ -1,6 +1,6 @@
 * {
 	font-size: 16px;
-	font-family: monospace;
+	font-family: "Hack Nerd Font Mono";
 	padding: 0;
     margin-top: -1;
     margin-bottom: -1;
@@ -32,9 +32,19 @@ window#waybar {
 #memory,
 #cpu,
 #battery,
+#network,
 #disk,
 #tray {
 	background: #1a1a1a;
+}
+
+#tray widget > image {
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+#tray > widget:last-child > image {
+	padding-right: 16px;
 }
 
 #workspaces button {
@@ -69,6 +79,9 @@ window#waybar {
 #battery {
 	color: #859900;
 }
+#network {
+	color: #2aa198;
+}
 #disk {
 	color: #b58900;
 }
@@ -78,6 +91,7 @@ window#waybar {
 #memory,
 #cpu,
 #battery,
+#network,
 #disk {
 	padding-left: 4px;
     padding-right: 8px;

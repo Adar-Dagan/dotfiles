@@ -24,6 +24,12 @@
 		"pulseaudio",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
+		"battery",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+		"network",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
 		"tray"
 	],
 
@@ -99,6 +105,14 @@
 			"",
 			""
 		]
+	},
+	"network": {
+		"format-wifi": " {signalStrength}%",
+		"format-ethernet": " Connected",
+		"format-disconnected": "󰖪 Disconnected",
+		"tooltip-format-wifi": "{essid}\n{ifname}: {ipaddr}",
+		"tooltip-format-ethernet": "{ifname}: {ipaddr}",
+		"tooltip-format-disconnected": "Network disconnected"
 	},
 	"disk": {
 		"interval": 5,
