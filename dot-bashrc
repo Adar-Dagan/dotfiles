@@ -10,6 +10,13 @@ shopt -s histappend
 HISTSIZE=100000
 HISTFILESIZE=200000
 
+if command -v nvim >/dev/null 2>&1; then
+    export EDITOR=nvim
+else
+    export EDITOR=vi
+fi
+export VISUAL="$EDITOR"
+
 shopt -s checkwinsize
 shopt -s globstar
 

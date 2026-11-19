@@ -34,6 +34,7 @@ window#waybar {
 #battery,
 #network,
 #disk,
+#custom-mutagen,
 #tray {
 	background: #1a1a1a;
 }
@@ -85,6 +86,18 @@ window#waybar {
 #disk {
 	color: #b58900;
 }
+#custom-mutagen.synced {
+	color: #859900;
+}
+#custom-mutagen.syncing {
+	color: #268bd2;
+}
+#custom-mutagen.error {
+	color: #dc322f;
+}
+#custom-mutagen.paused {
+	color: #839496;
+}
 
 #clock,
 #pulseaudio,
@@ -92,6 +105,7 @@ window#waybar {
 #cpu,
 #battery,
 #network,
+#custom-mutagen,
 #disk {
 	padding-left: 4px;
     padding-right: 8px;
