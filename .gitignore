@@ -1,5 +1,7 @@
 dot-config/hypr/hyprmoncfg-monitors.conf
+dot-config/hypr/hyprmoncfg-monitors.lua
 dot-config/hypr/machine.conf
+dot-config/hypr/machine.lua
 dot-config/hypr/xdph.conf
 dot-config/waybar/modules-right-machine.jsonc
 dot-config/waybar/mutagen.sh
